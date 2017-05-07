@@ -1,0 +1,81 @@
+{
+  "name": "input-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm run std",
+    "build": "browserify -vd -e src/index.js -o build/app.js",
+    "postbuild": "npm run cp-assets",
+    "cp-assets": "npm run cp-html && npm run cp-images",
+    "cp-html": "cp html/index.html build/index.html",
+    "postcp-html": "cp html/200.html build/200.html",
+    "cp-images": "cp -r images/ build/images",
+    "cp-fonts": "cp -r fonts/ build/fonts",
+    "predeploy": "npm run build",
+    "deploy": "surge --d inputlogic.ca -p build/",
+    "preversion": "git pull && npm up && npm run std",
+    "version": "npm run build && git add -A .",
+    "postversion": "git push --tags origin HEAD",
+    "browse": "node browser-sync.js",
+    "start": "npm run build && npm-run-all --parallel watch browse",
+    "std": "standard --verbose | snazzy",
+    "test": "npm run build",
+    "watch": "watchify -vd -e src/index.js -o build/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nerdburn/input-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nerdburn/input-web/issues"
+  },
+  "homepage": "https://github.com/nerdburn/input-web#readme",
+  "devDependencies": {
+    "babel-plugin-jsx-import": "staydecent/babel-plugin-jsx-import",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "7.3.0",
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.3.0",
+    "connect-history-api-fallback": "^1.3.0",
+    "npm-run-all": "^4.0.2",
+    "snazzy": "^7.0.0",
+    "standard": "^9.0.2",
+    "surge": "^0.19.0",
+    "watchify": "^3.9.0"
+  },
+  "dependencies": {
+    "atom": "^1.0.0",
+    "check-arg-types": "^1.1.0",
+    "classless-component": "staydecent/classless-component",
+    "glamor": "^2.20.24",
+    "preact": "^8.1.0",
+    "preact-portal": "^1.1.1",
+    "preact-router": "^2.4.5",
+    "ramda": "^0.23.0"
+  },
+  "engines": {
+    "npm": ">=3.0.0",
+    "node": ">=6.0.0 <7.0.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "Preact"
+    ],
+    "ignore": [
+      "build"
+    ]
+  }
+}
