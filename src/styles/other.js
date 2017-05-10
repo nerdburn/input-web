@@ -1,0 +1,26 @@
+export const gutter = '50px'
+export const corners = '5px'
+
+export const desktopLargeMinWidth = '1400px'
+export const desktopMaxWidth = '1200px'
+export const desktopMinWidth = '1025px'
+export const tabletMaxWidth = '1024px'
+export const tabletMinWidth = '768px'
+export const phoneMaxWidth = '767px'
+export const phoneLrgWidth = '376px'
+export const phoneMinWidth = '320px'
+
+{/*
+export const desktop-large = '~"screen and (min-width = 'export const {desktop-large-min-width})"'
+export const desktop = '~"screen and (min-width = 'export const {desktop-min-width})"'
+export const tablet-desktop = '~"screen and (min-width = 'export const {tablet-min-width})"'
+export const tablet-landscape-desktop = '~"screen and (min-width = 'export const {tablet-max-width})"'
+export const tablet = '~"screen and (min-width = 'export const {tablet-min-width}) and (max-width = 'export const {tablet-max-width})"'
+export const phone-tablet = '~"screen and (max-width = 'export const {tablet-max-width})"'
+export const phone = '~"screen and (max-width = 'export const {phone-max-width})"'
+export const phone-landscape = '~"screen and (max-width = 'export const {phone-max-width}) and (orientation = 'portrait)"'
+export const phone-large = '~"screen and (min-width = 'export const {phone-lrg-width}) and (max-width = 'export const {phone-max-width})"'
+export const phone-small = '~"screen and (max-width = 'export const {phone-min-width})"'
+export const phone-to-desktop-max = '~"screen and (max-width = 'export const {desktop-max-width})"'
+export const phone-to-desktop-max = '~"screen and (max-width = 'export const {desktop-max-width})"'
+*/}
