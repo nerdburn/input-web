@@ -1,33 +1,30 @@
 import Router from 'preact-router'
+import {compose} from 'classless-component'
 
 import {getState, subscribe} from '/store'
 
-let {render, Component} = Preact
+import {Layout} from '/components/elements/layout'
 
-const Example = ({url}) =>
-  <div>
-    <h1>Input Logic</h1>
-    <p>{url}</p>
-  </div>
+import {Home} from '/components/pages/home'
 
-class Main extends Component {
-  constructor () {
-    super()
-    this.state = getState()
-  }
+let {render, Component, h} = Preact
 
-  componentDidMount () {
+const Main = compose(Component, h,
+  {state: getState()},
+  function componentDidMount () {
     subscribe(() => this.setState(getState()))
-  }
-
-  render (_, {...props}) {
+  },
+  function render ({...props}) {
     console.log('Main', props)
     return (
-      <Router>
-        <Example path='/' />
-      </Router>
+      <Layout {...props}>
+        <Router>
+          <Home path='/' />
+          <Error type='404' default />
+        </Router>
+      </Layout>
     )
   }
-}
+)
 
 render(<Main />, document.body)

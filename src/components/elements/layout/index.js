@@ -1,7 +1,6 @@
 import {css} from 'glamor'
-import {compose, withState} from 'classless-component'
-
-import {baseFontSize, baseFontWeight, baseLineHeight} from '/styles/typography'
+/* import {compose, withState} from 'classless-component' */
+import {baseFontFamily, baseFontSize, baseFontWeight, baseLineHeight} from '/styles/typography'
 import {white, yellow, text, black} from '/styles/colours'
 import {gutter} from '/styles/other'
 
@@ -15,6 +14,7 @@ css.insert(`
   html, body {
     width: 100%;
     height: 100%;
+    font-family: ${baseFontFamily};
     font-size: ${baseFontSize};
   }
 
@@ -65,18 +65,17 @@ css.insert(`
   }
 `)
 
-{/* transitionName={segment === 'root' ? 'reversePageSwap' : 'pageSwap'} */}
-{/* {React.cloneElement(this.props.children, { key: segment })} */}
-
+/* transitionName={segment === 'root' ? 'reversePageSwap' : 'pageSwap'}
+{React.cloneElement(this.props.children, { key: segment })} */
 export const Layout = ({children, ...props}) =>
   <div className='app'>
     <CSSTransitionGroup
       transitionName='pageSwap'
       transitionEnterTimeout={500}
       transitionLeaveTimeout={500}
-      transitionAppear={true}
+      transitionAppear
       transitionAppearTimeout={500}>
-        {children}
+      {children}
     </CSSTransitionGroup>
   </div>
 

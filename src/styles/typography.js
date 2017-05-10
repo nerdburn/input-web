@@ -1,52 +1,52 @@
 import {css} from 'glamor'
-import {text, black, yellow} from '/styles/colours'
 
-export const baseFont = 'sans-serif'
+export const baseFontFamily = 'sans-serif'
 export const baseFontSize = '16px'
 export const baseLineHeight = '1.6'
 
 export const fontSize = (n = 1) => n * +baseFontSize.replace('px', '')
 
-{/* example of how to make a 'class'
-export const smallTitleStyle = css({
-
+export const avenirBold = css({
+  fontFamily: 'Avenir Next Cyr W00 Demi'
 })
-*/}
-{/*
-.avenir(@weight) when (@weight = 'bold') {
-  font-family:'Avenir Next Cyr W00 Demi';
-}
-.avenir(@weight) when (@weight = 'medium') {
-  font-family:'Avenir Next Cyr W00 Regular';
-}
-.avenir(@weight) when (@weight = 'light') {
-  font-family:'Avenir Next Cyr W00 Ult Light';
-}
-*/}
-{/*
-h1 {
-  font-size: 3rem;
-  line-height: 3.3rem;
-}
-h2 {
-  font-size: 2.5rem;
-  line-height: 2.8rem;
-}
-h3 {
-  font-size: 2rem;
-  line-height: 2.2rem;
-}
-h4 {
-  font-size: 1.5rem;
-  line-height: 1.7rem;
-}
-h5 {
-  font-size: 1rem;
-}
-h6 {
-  font-size: 0.8rem;
-}
 
+export const avenirMedium = css({
+  fontFamily: 'Avenir Next Cyr W00 Regular'
+})
+
+export const avenirLight = css({
+  fontFamily: 'Avenir Next Cyr W00 Ult Light'
+})
+
+export const h1 = css({
+  fontSize: '3rem',
+  lineHeight: '3.3rem'
+})
+
+export const h2 = css({
+  fontSize: '2.5rem',
+  lineHeight: '2.8rem'
+})
+
+export const h3 = css({
+  fontSize: '2rem',
+  lineHeight: '2.2rem'
+})
+
+export const h4 = css({
+  fontSize: '1.5rem',
+  lineHeight: '1.7rem'
+})
+
+export const h5 = css({
+  fontSize: '1rem'
+})
+
+export const h6 = css({
+  fontSize: '0.8rem'
+})
+
+/*
 p {
   font-size: 0.9rem;
   line-height: 1.6rem;
@@ -81,4 +81,4 @@ ul.social {
     }
   }
 }
-*/}
+*/
