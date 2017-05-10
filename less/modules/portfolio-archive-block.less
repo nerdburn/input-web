@@ -1,0 +1,254 @@
+.portfolio-archive-block {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    @media @tablet-desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .column {
+      width: 100%;
+      @media @tablet-desktop {
+        width: 40%;
+      }
+      li {
+        width: 100%;
+        display: block;
+        margin-bottom: @gutter*3;
+        &:last-of-type {
+          margin-bottom: @gutter;
+        }
+        .portfolio-img {
+          width: 100%;
+          height: 300px;
+          background: url(/images/case-studies/waggle/waggle-mobile-01.png) @gutter @gutter no-repeat @waggle-red;
+          background-size: 100%;
+          margin-bottom: @gutter/2;
+          cursor: pointer;
+          transition: all 300ms ease;
+          display: block;
+          &:hover {
+            background-size: 105%;
+            background-position: 40px;
+          }
+          @media @tablet {
+            background-position: @gutter;
+            background-size: 450px;
+            height: 400px;
+            &:hover {
+              background-size: 475px;
+            }
+          }
+          @media @desktop {
+            background-position: 75px;
+            background-size: 500px;
+            height: 500px;
+            &:hover {
+              background-size: 525px;
+              background-position: 60px;
+            }
+          }
+          @media @desktop-large {
+            background-size: 700px;
+            height: 650px;
+            &:hover {
+              background-size: 725px;
+              background-position: 60px;
+            }
+          }
+          &.moodji {
+            background: url(/images/case-studies/moodji/moodji-mobile-01.png) center 75px no-repeat @moodji-blue;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.quote-robot {
+            background-image: url(/images/case-studies/quoterobot/quoterobot-web-04.png);
+            background-color: @quote-robot-blue;
+          }
+          &.postachio {
+            background-image: url(/images/case-studies/postachio/postachio-web-01.png);
+            background-color: @postachio-green;
+          }
+          &.volley {
+            background: url(/images/case-studies/volley/volley-logo-01.png) @gutter no-repeat @volley-blue;
+            background-size: 100%;
+            &:hover {
+              background-size: 105%;
+              background-position: 40px;
+            }
+            @media @desktop {
+              background-size: 125%;
+              &:hover {
+                background-size: 130%;
+                background-position: 40px;
+              }
+            }
+          }
+          &.data-wallet {
+            background-image: url(/images/case-studies/datawallet/datawallet-web-01.png);
+            background-color: @data-wallet-red;
+          }
+          &.contractors {
+            background: url(/images/case-studies/contractors/contractors-mobile-01.png) center 75px no-repeat @contractors-red;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.gitlance {
+            background-image: url(/images/case-studies/gitlance/gitlance-web-01.png);
+            background-color: @gitlance-gray;
+          }
+          &.kuper {
+            background-image: url(/images/case-studies/kuper/kuper-web-01.png);
+            background-color: @kuper-blue;
+          }
+          &.ubora {
+            background: url(/images/case-studies/ubora/ubora-mobile-01.png) center 75px no-repeat @ubora-blue;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.duby {
+            background: url(/images/case-studies/duby/duby-mobile-01.png) center 75px no-repeat @duby-blue;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.roomchat {
+            background: url(/images/case-studies/roomchat/roomchat-mobile-01.png) center 75px no-repeat @roomchat-green;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.dawnofwar {
+            background-image: url(/images/case-studies/dawnofwar/dawnofwar-web-01.png);
+            background-color: @black;
+          }
+          &.netgear {
+            background: url(/images/case-studies/netgear/netgear-mobile-01.png) center 75px no-repeat @netgear-purple;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.voxeet {
+            background: url(/images/case-studies/voxeet/voxeet-mobile-01.png) center 75px no-repeat @voxeet-blue;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.waggle {
+            background: url(/images/case-studies/waggle/waggle-mobile-01.png) center 75px no-repeat @waggle-red;
+            background-size: 60%;
+            &:hover {
+              background-size: 62%;
+              background-position: center 50px;
+            }
+            @media @desktop {
+              height: 400px;
+            }
+            @media @desktop-large {
+              height: 500px;
+            }
+          }
+          &.fts {
+            background-image: url(/images/case-studies/fts/fts-web-03.png);
+            background-color: @fts-green;
+          }
+          &.posirank {
+            background-image: url(/images/case-studies/posirank/posirank-web-04.png);
+            background-color: @posirank-blue;
+          }
+        }
+        h3 {
+          .avenir('bold');
+          font-size: 1.7rem;
+          line-height: 2.2rem;
+          padding-bottom: @gutter/1.5;
+          @media @tablet-desktop {
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+          }
+        }
+        h5 {
+          font-family: "Pitch-Semibold";
+          font-size: 0.9rem;
+          padding-bottom: @gutter/2;
+          @media @tablet-desktop {
+            font-size: 1.1rem;
+          }
+        }
+        p {
+          font-size: 0.95rem;
+          line-height: 1.8rem;
+          padding-bottom: 0;
+          @media @tablet-desktop {
+            font-size: 1.2rem;
+            line-height: 2.3rem;
+          }
+        }
+      }
+      &:nth-child(2){
+        @media @tablet-desktop {
+          padding-top: @gutter*6;
+        }
+      }
+    }
+  }
+}

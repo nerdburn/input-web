@@ -1,0 +1,21 @@
+.skylight-wrapper {
+  .skylight-dialog {
+    padding: 0 !important;
+    overflow-y: auto !important;
+    a {
+      &.skylight-close-button {
+        font-size: 2.5rem !important;
+        top: @gutter/2 !important;
+        right: @gutter/2 !important;
+        z-index: 99999;
+        @media @tablet-desktop {
+          top: @gutter !important;
+          right: @gutter !important;
+        }
+      }
+    }
+    h2 {
+      display: none;
+    }
+  }
+}

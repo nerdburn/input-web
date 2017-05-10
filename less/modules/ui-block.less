@@ -1,0 +1,73 @@
+//UI BLOCK
+.ui-block {
+  &.gray-bg {
+    background-color: @gray-bg;
+  }
+  .content-wrapper {
+    &.no-btm-pad {
+      padding-bottom: 0;
+      border-bottom: 1px solid @gray-bg;
+    }
+    .ui-images {
+      margin-bottom: @gutter;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      @media @tablet-desktop {
+        justify-content: space-between;
+        flex-direction: row;
+        margin-bottom: @gutter*1.5;
+      }
+      .img-wrapper {
+        width: 60%;
+        max-width: 220px;
+        margin: 0 0 @gutter/2 0;
+        @media @tablet-desktop {
+          width: 30%;
+          max-width: 287px;
+        }
+        &.web-ui {
+          width: 100%;
+          max-width: 300px;
+          @media @tablet-desktop {
+            max-width: 1015px;
+          }
+        }
+        &.ipad-ui {
+          width: 48%;
+          max-width: 300px;
+          @media @tablet-desktop {
+            max-width: 590px;
+          }
+        }
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+    h5 {
+      font-family: "Pitch-Semibold";
+      padding-bottom: @gutter/1.5;
+      @media @tablet-desktop {
+        font-size: 1.1rem;
+        line-height: 1.1rem;
+        padding-bottom: @gutter*1.25;
+        width: 60%;
+      }
+    }
+    p {
+      .avenir('medium');
+      color: @text-light;
+      @media @tablet-desktop {
+        font-size: 1rem;
+        line-height: 2rem;
+        width: 80%;
+      }
+      @media @desktop {
+        width: 50%;
+      }
+    }
+  }
+}

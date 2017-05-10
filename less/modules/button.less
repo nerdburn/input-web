@@ -1,0 +1,141 @@
+button,
+a.btn {
+  .avenir('light');
+  color: @black;
+  font-size: 1rem;
+  display: inline-block;
+  padding: @gutter/3 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin:  @gutter/3 auto 0 auto;
+    background-color: @yellow;
+    content: '';
+    transition: all 0.5s ease-in-out;
+  }
+
+  span {
+    margin-right: @gutter/6;
+    &.right-icon {
+      font-size: 0.8rem;
+      margin: 0 0 0 @gutter/6;
+    }
+  }
+
+&.btn-medium {
+  .avenir('medium');
+}
+&.btn-bold {
+  .avenir('bold');  
+}
+
+  &:hover {
+    color: @yellow;
+    &:after {
+      width: 60%;
+    }
+  }
+
+  &:active,
+  &[data-loading] {
+    transform: translate(0, 2px);
+  }
+
+  &.small {
+    font-size: 0.65rem;
+    padding: @gutter/4 20px;
+  }
+
+  &.big {
+    font-size: 1rem;
+    padding: @gutter/2 @gutter*1.5;
+  }
+
+  &.on-yellow {
+    &:after {
+      background-color: @white;
+    }
+    &:hover {
+      color: @white;
+    }
+    &.arrow {
+      color: @black;
+      &:hover {
+        color: @white;
+      }
+    }
+  }
+
+  &.on-black {
+    color: @yellow;
+    &:after {
+      background-color: @white;
+    }
+    &:hover {
+      color: @white;
+    }
+  }
+  
+  &.arrow {
+    color: @black;
+    font-size: 2.5rem;
+    &:hover {
+      color: @yellow;
+      transform: translate(4px, 0);
+    }
+    &:active {
+      transform: translate(4px, 2px);
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  &.arrow-left {
+    color: @black;
+    font-size: 2.5rem;
+    &:hover {
+      color: @yellow;
+      transform: translate(-4px, 0);
+    }
+    &:active {
+      transform: translate(-4px, 2px);
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  &.arrow-down {
+    color: @white;
+    font-size: 2.5rem;
+    &:hover {
+      color: @yellow;
+      transform: translate(0, 4px);
+    }
+    &:active {
+      transform: translate(0, 6px);
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+  &[disabled] {
+    color: darken(@text, 20%);
+    background-color: @white;
+    box-shadow: 0 3px 0 darken(@text, 10%);
+    border: 1px solid darken(@text, 10%);
+    cursor: default;
+    &[data-loading] {
+      border: 0;
+      transform: translate(0, 2px);
+      background-color: @text;
+    }
+  }
+}

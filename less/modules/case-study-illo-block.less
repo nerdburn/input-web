@@ -1,0 +1,25 @@
+.case-study-illo-block {
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    flex-direction: column;
+    @media @tablet-desktop {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .img-wrapper {
+      width: 100%;
+      margin-bottom: @gutter/2;
+      @media @tablet-desktop {
+        width: 30%;
+        margin-bottom: 0;
+      }
+      img {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+}

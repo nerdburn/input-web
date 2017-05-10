@@ -1,0 +1,96 @@
+header {
+  width: 100%;
+  height: 550px;
+  background: @black;
+  padding-top: 0px;
+  @media @tablet-desktop {
+    padding-top: 0;
+    height: 900px;
+  }
+
+  .content-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: @gutter;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media @tablet-desktop {
+      padding: @gutter*2;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0;
+      position: absolute;
+      top: @gutter;
+      left: @gutter;
+      @media @tablet-desktop {
+        top: @gutter*2;
+        left: @gutter*2;
+      }
+      a.btn {
+        color: @white;
+        padding: 0;
+      }
+    }
+
+    h2 {
+      color: @white;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      padding: @gutter 0 0 0;
+      @media @phone-large {
+        font-size: 2.5rem;
+        line-height: 3.2rem;
+      }
+      @media @tablet {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+      @media @tablet-landscape-desktop {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+      }
+    }
+
+    p {
+      color: @white;
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      padding: @gutter/2 0 0 0;
+      @media @tablet-landscape-desktop {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        width: 65%;
+        padding: @gutter 0 0 0;
+      }
+    }
+  }
+
+  &.netgear-header {
+    background-color: @netgear-purple;
+  }
+  &.voxeet-header {
+    background-color: @voxeet-blue;
+  }
+  &.waggle-header {
+    background-color: @waggle-red;
+  }
+  &.duby-header {
+    background-color: @duby-blue;
+  }
+  &.used-header {
+    background-color: @used-purple;
+  }
+  &.fts-header {
+    background-color: @fts-green;
+  }
+  &.posirank-header {
+    background-color: @posirank-blue;
+  }
+}

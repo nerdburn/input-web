@@ -1,0 +1,28 @@
+ul.top-nav {
+  position: absolute;
+  top: @gutter;
+  right: @gutter;
+  li {
+    display: inline-block;
+    padding-left: @gutter;
+  }
+  a {
+    color: @white;
+    font-weight: bold;
+    &:hover {
+      color: @yellow;
+    }
+  }
+  @media @tablet-desktop {
+    top: @gutter*2;
+    right: @gutter*2;
+  }
+  @media @phone {
+    li {
+      display: block;
+      text-align: right;
+      padding-left: 0;
+      line-height: 2;
+    }
+  }
+}
